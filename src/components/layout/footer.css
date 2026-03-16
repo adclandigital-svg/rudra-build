@@ -1,6 +1,6 @@
 .rudra-footer {
   position: relative;
-  padding: 100px 8%;
+  padding: 70px 8%;
   color: #fff;
 
   background-image:
@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 20px;
 }
 
 /* container */
@@ -146,7 +147,7 @@
 /* BACKGROUND WORD */
 
 .rudra-footer::before {
-  content: "RUDRA";
+  content: "";
   position: absolute;
   bottom: 20px;
   right: 40px;

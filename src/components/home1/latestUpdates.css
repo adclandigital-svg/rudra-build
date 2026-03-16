@@ -1,0 +1,152 @@
+/* Container */
+.updates-section {
+  position: relative;
+  padding: 40px 8%; /* reduced from 50px */
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Pseudo-element for background image */
+.updates-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://img.freepik.com/premium-vector/abstract-background-with-white-gray-color-lines_711910-240.jpg?w=2000");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Make sure section content is above the background */
+.updates-section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADER */
+.updates-header {
+  text-align: center;
+  margin-bottom: 50px; /* reduced from 70px */
+  color: black;
+}
+.updates-header span {
+  color: #c89b5b;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+.updates-header h2 {
+  font-size: 38px; /* slightly smaller */
+  margin-top: 10px;
+}
+
+/* GRID */
+.updates-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, minmax(220px, auto)); /* reduced from 260px */
+  gap: 20px;
+}
+
+/* LARGE IMAGE */
+.update-large {
+  grid-row: 1 / span 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* SMALL IMAGE */
+.update-small {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* IMAGE */
+.update-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s;
+}
+.update-large:hover .update-img,
+.update-small:hover .update-img {
+  transform: scale(1.08);
+}
+
+/* OVERLAY */
+.update-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px; /* slightly less */
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fff;
+}
+.update-overlay h3 {
+  font-size: 20px; /* smaller */
+  margin-bottom: 5px;
+}
+.update-overlay p {
+  font-size: 13px; /* smaller */
+  color: #ddd;
+}
+
+/* GOLD LINE */
+.update-overlay::before {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #c89b5b;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* RESPONSIVE */
+
+/* Medium screens (laptops/tablets) */
+@media (max-width: 1200px) {
+  .updates-grid {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+  .update-large {
+    height: 100%;
+  }
+  .update-small {
+    height: auto;
+    min-height: 220px; /* reduced from 250px */
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 900px) {
+  .updates-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .update-large {
+    height: 300px; /* reduced from 350px */
+  }
+  .update-small {
+    height: 200px; /* reduced from 250px */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .update-overlay {
+    padding: 12px; /* reduced */
+  }
+  .update-overlay h3 {
+    font-size: 16px; /* smaller */
+  }
+  .update-overlay p {
+    font-size: 11px; /* smaller */
+  }
+}

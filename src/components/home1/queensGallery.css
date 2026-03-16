@@ -1,0 +1,70 @@
+.queens-carousel-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 80px 0; /* increased from 40px to 80px for more height */
+  background: #fdfdfd;
+}
+
+.queens-carousel-wrapper h1 {
+  margin-bottom: 30px; /* slightly more space below title */
+  font-size: 32px; /* slightly bigger for emphasis */
+  color: #111;
+}
+
+/* Container */
+.carousel-container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0; /* optional: adds space above/below carousel */
+}
+
+/* Track */
+.carousel-track {
+  display: flex;
+  animation: scrollLeft 10s linear infinite;
+  -webkit-animation: scrollLeft 10s linear infinite;
+}
+
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused; /* pause on hover */
+}
+
+/* Item */
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 15px; /* slightly more spacing between images */
+}
+
+.carousel-item img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Keyframes */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .carousel-item img {
+    width: 160px;
+    height: 240px; /* increased proportionally */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    width: 140px;
+    height: 200px; /* increased proportionally */
+  }
+}

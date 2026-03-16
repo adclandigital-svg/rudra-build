@@ -17,7 +17,7 @@ export default function RudraStats() {
     // Animate all elements with .rudra-anim
     const animElems = sectionRef.current.querySelectorAll(".rudra-anim");
     gsap.from(animElems, {
-      y: 50,
+      // y: 50,
       duration: 1,
       stagger: 0.2,
       ease: "power3.out",
