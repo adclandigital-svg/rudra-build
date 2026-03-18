@@ -1,8 +1,8 @@
 import {  Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/providers/LenisProvider";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+// import Navbar from "@/components/layout/Navbar";
+// import Footer from "@/components/layout/Footer";
 import ContactPopup from "@/components/layout/ContactPopup";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -22,9 +22,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={cormorantGaramond.variable}>
       <body>
         <LenisProvider>
-          <Navbar/>
+          {/* <Navbar/> */}
           {children}
-          <Footer/>
+          {/* <Footer/> */}
         </LenisProvider>
         <ContactPopup/>
       </body>

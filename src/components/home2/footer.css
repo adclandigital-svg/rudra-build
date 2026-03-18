@@ -1,0 +1,261 @@
+.rudra-footer {
+  position: relative;
+  padding: 70px 8%;
+  color: #fff;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,1)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+
+/* container */
+
+.rudra-footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+/* LEFT */
+
+.footer-left {
+  flex: 1;
+  max-width: 420px;
+}
+
+.footer-title {
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.footer-title span {
+  color: #e70b03; /* 🔴 changed */
+}
+
+.footer-text {
+  font-size: 16px;
+  color: #cccccc;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  border: 1px solid #e70b03; /* 🔴 changed */
+  color: #fff;
+  text-decoration: none;
+  transition: 0.35s;
+}
+
+.footer-btn:hover {
+  background: #e70b03; /* 🔴 changed */
+  color: #fff;
+}
+
+/* RIGHT */
+
+.footer-right {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* COLUMNS */
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 140px;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #e70b03; /* 🔴 changed */
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #e70b03; /* 🔴 changed */
+}
+
+.footer-col p {
+  font-size: 16px;
+  color: #bbb;
+}
+
+/* SOCIAL */
+
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  border-color: #e70b03; /* 🔴 changed */
+  color: #e70b03; /* 🔴 changed */
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+  margin-top: 70px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* BACKGROUND WORD */
+
+.rudra-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 200px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.03);
+  pointer-events: none;
+}
+
+/* ---------------- */
+/* TABLET */
+/* ---------------- */
+
+@media (max-width: 1024px) {
+
+  .rudra-footer {
+    padding: 80px 6%;
+  }
+
+  .footer-title {
+    font-size: 36px;
+  }
+
+  .footer-right {
+    gap: 30px;
+  }
+
+}
+
+/* ---------------- */
+/* MOBILE */
+/* ---------------- */
+
+@media (max-width: 768px) {
+
+  .rudra-footer-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .footer-left {
+    max-width: 100%;
+  }
+
+  .footer-right {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  .footer-col {
+    min-width: 120px;
+  }
+
+  .footer-title {
+    font-size: 30px;
+  }
+
+  .footer-btn {
+    width: fit-content;
+  }
+
+  .rudra-footer::before {
+    font-size: 120px;
+    right: 20px;
+  }
+
+}
+
+/* ---------------- */
+/* SMALL MOBILE */
+/* ---------------- */
+
+@media (max-width: 480px) {
+
+  .rudra-footer {
+    padding: 70px 5%;
+  }
+
+  .footer-title {
+    font-size: 26px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-socials {
+    margin-top: 8px;
+  }
+
+  .rudra-footer::before {
+    font-size: 80px;
+    right: 10px;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+    font-size: 12px;
+  }
+
+}

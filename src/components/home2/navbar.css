@@ -1,0 +1,282 @@
+/* NAVBAR */
+
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 70px;
+  z-index: 999;
+  background: transparent;
+  transition: 0.4s;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-wrapper.scrolled {
+  background: white;
+  backdrop-filter: blur(10px); /* glass effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* subtle glass edge */
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+.scrolled .logo img {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(95%) saturate(7000%)
+    hue-rotate(355deg) brightness(80%) contrast(110%);
+}
+/* RIGHT NAV */
+
+.nav-righ {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-righ a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.scrolled .nav-righ a {
+  color: #e70b03;
+}
+.scrolled .nav-righ a:hover {
+  color: #000000;
+}
+
+.nav-righ a:hover {
+  color: #e70b03;
+}
+
+/* HAMBURGER */
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.4s;
+}
+.hamburger:hover span {
+  background-color: #e70b03;
+}
+
+.scrolled .hamburger span {
+  background: #e70b03;
+}
+.scrolled .hamburger:hover span {
+  background: #030303;
+}
+
+.hamburger span:nth-child(1) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(2) {
+  bottom: 8px;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  bottom: 14px;
+  transform: rotate(-45deg);
+}
+
+/* OVERLAY */
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 998;
+}
+
+/* SIDEBAR */
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 320px;
+  transform: translateX(100%);
+  z-index: 999;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #e70b03;
+}
+
+/* MENU */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 80px;
+}
+
+/* LINKS */
+
+.menu-link {
+  font-size: 22px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+
+.menu-link span {
+  font-size: 12px;
+  color: #999;
+}
+
+/* 🔴 HOVER RED */
+
+.menu-link:hover {
+  color: #e70b03;
+  transform: translateX(6px);
+}
+
+/* PROJECT WRAPPER */
+
+.sidebar-project {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -10px;
+}
+
+/* PROJECT TITLE */
+
+.project-title {
+  cursor: pointer;
+}
+
+/* SUBMENU */
+
+.project-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* SHOW ON HOVER */
+
+.sidebar-project:hover .project-submenu {
+  opacity: 1;
+  max-height: 320px;
+}
+
+/* SUBMENU LINKS */
+
+.project-submenu .menu-link {
+  font-size: 18px;
+  color: #333;
+}
+
+.project-submenu .menu-link:hover {
+  color: #e70b03;
+}
+
+/* FOOTER */
+
+.sidebar-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* RESPONSIVE */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .menu-link {
+    font-size: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    padding: 20px 25px;
+  }
+
+  .nav-righ a {
+    display: none;
+  }
+
+  .menu-link {
+    font-size: 18px;
+  }
+
+  .project-submenu .menu-link {
+    font-size: 16px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .menu-link {
+    font-size: 16px;
+  }
+
+  .project-submenu .menu-link {
+    font-size: 14px;
+  }
+}

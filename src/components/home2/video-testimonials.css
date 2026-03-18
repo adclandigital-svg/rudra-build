@@ -1,0 +1,264 @@
+.review-section {
+  padding: 50px 8%;
+  font-family: var(--font-spectral);
+  position: relative;
+  z-index: 1;
+
+  background-image: url("/1.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+/* overlay for transparency */
+.review-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: -1;
+}
+
+.review-header {
+  text-align: center;
+}
+
+.review-header span {
+  color: #000000; /* 🔴 changed */
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.review-header h2 {
+  font-size: 42px;
+  margin-top: 10px;
+  color: #e70b03;
+  line-height: 1.3;
+}
+
+/* REVIEW CARD */
+.review-slide {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+/* VIDEO */
+.review-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* CONTENT */
+.review-content h3 {
+  font-size: 26px;
+  color: #e70b03;
+}
+
+.review-content .role {
+  color: #000000; /* 🔴 changed */
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.stars {
+  color: #e70b03; /* 🔴 changed */
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.review-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* BUTTON */
+.review-btn {
+  position: relative;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 1px solid #e70b03; /* 🔴 changed */
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  color: #000;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.review-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #e70b03; /* 🔴 changed */
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.review-btn:hover::before {
+  left: 0;
+}
+
+.review-btn:hover {
+  color: #fff;
+  border-color: #e70b03; /* 🔴 changed */
+}
+
+/* SWIPER PAGINATION */
+.swiper-pagination-bullet {
+  background: #e70b03 !important; /* 🔴 changed */
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (min-width: 1440px) {
+  .review-slide {
+    padding: 80px;
+    gap: 80px;
+  }
+
+  .review-header h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .review-slide {
+    padding: 50px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .review-slide {
+    grid-template-columns: 1fr;
+    padding: 45px;
+    gap: 40px;
+  }
+
+  .review-video video {
+    height: 300px;
+  }
+
+  .review-header h2 {
+    font-size: 30px;
+  }
+
+  .review-content h3 {
+    font-size: 22px;
+  }
+
+  .review-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-section {
+    padding: 80px 6%;
+  }
+
+  .review-slide {
+    padding: 35px;
+    border-radius: 20px;
+  }
+
+  .review-header h2 {
+    font-size: 26px;
+  }
+
+  .review-video video {
+    height: 250px;
+  }
+
+  .review-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .review-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-section {
+    background-size: contain;
+    padding: 60px 5%;
+  }
+
+  .review-slide {
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .review-header h2 {
+    font-size: 22px;
+  }
+
+  .review-header span {
+    font-size: 12px;
+  }
+
+  .review-content h3 {
+    font-size: 18px;
+  }
+
+  .review-text {
+    font-size: 13px;
+  }
+
+  .review-video video {
+    height: 200px;
+  }
+
+  .review-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .review-slide {
+    padding: 20px;
+  }
+
+  .review-header h2 {
+    font-size: 20px;
+  }
+
+  .review-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 650px) {
+  .review-slide {
+    padding: 30px;
+  }
+
+  .review-video video {
+    height: 220px;
+  }
+
+  .review-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}

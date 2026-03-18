@@ -1,0 +1,201 @@
+/* SECTION */
+
+.rudra-section {
+  padding: 100px 8%;
+  position: relative;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url("/1.jpg");
+
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+/* WRAPPER */
+
+.rudra-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 120px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* LEFT CONTENT */
+
+.rudra-content {
+  flex: 1;
+  max-width: 650px;
+}
+
+/* LABEL */
+
+.rudra-label {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #0a0a0a; /* 🔴 changed */
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* TITLE */
+
+.rudra-title {
+  font-size: 46px;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 24px;
+}
+.rudra-title span {
+  font-weight: 600;
+  color: #e70b03;
+}
+
+/* TEXT */
+
+.rudra-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+}
+
+/* RIGHT STATS */
+
+.rudra-stats {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  border-left: 2px solid #e70b03; /* 🔴 changed */
+  padding-left: 70px;
+}
+
+/* EACH STAT */
+
+.stat {
+  flex: 0 0 calc(50% - 25px);
+  text-align: left;
+  transition: all 0.35s ease;
+}
+
+/* ICON */
+
+.stat-icon {
+  font-size: 42px;
+  color: #e70b03; /* 🔴 changed */
+  margin-bottom: 10px;
+}
+
+/* NUMBER */
+
+.stat h3 {
+  font-size: 44px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+/* LABEL */
+
+.stat p {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #777;
+}
+
+/* HOVER */
+
+.stat:hover {
+  transform: translateY(-6px);
+}
+
+/* ---------------- */
+/* TABLET */
+/* ---------------- */
+
+@media (max-width: 1024px) {
+  .rudra-wrapper {
+    gap: 70px;
+  }
+
+  .rudra-title {
+    font-size: 40px;
+  }
+
+  .rudra-text {
+    font-size: 16px;
+  }
+
+  .rudra-stats {
+    padding-left: 50px;
+  }
+
+  .stat h3 {
+    font-size: 36px;
+  }
+}
+
+/* ---------------- */
+/* MOBILE */
+/* ---------------- */
+
+@media (max-width: 768px) {
+  .rudra-wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .rudra-stats {
+    border-left: none;
+    padding-left: 0;
+    gap: 40px;
+  }
+
+  .stat {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  .rudra-title {
+    font-size: 34px;
+  }
+}
+
+/* ---------------- */
+/* SMALL MOBILE */
+/* ---------------- */
+
+@media (max-width: 480px) {
+  .rudra-section {
+    padding: 80px 6%;
+  }
+
+  .rudra-title {
+    font-size: 28px;
+  }
+
+  .rudra-text {
+    font-size: 15px;
+  }
+
+  .rudra-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+  }
+
+  .stat {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  .stat h3 {
+    font-size: 28px;
+  }
+
+  .stat-icon {
+    font-size: 32px;
+  }
+}
