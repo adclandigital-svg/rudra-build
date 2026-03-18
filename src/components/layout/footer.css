@@ -4,7 +4,7 @@
   color: #fff;
 
   background-image:
-    linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.95)),
+    linear-gradient(rgba(0,0,0,0.90), rgba(0,0,0,1)),
     url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab");
 
   background-size: cover;
@@ -39,11 +39,11 @@
 }
 
 .footer-title span {
-  color: #c89b5b;
+  color: #9e0500; /* 🔴 changed */
 }
 
 .footer-text {
-  font-size: 15px;
+  font-size: 16px;
   color: #cccccc;
   margin-bottom: 25px;
 }
@@ -55,15 +55,15 @@
   align-items: center;
   gap: 10px;
   padding: 12px 26px;
-  border: 1px solid #c89b5b;
+  border: 1px solid #9e0500; /* 🔴 changed */
   color: #fff;
   text-decoration: none;
   transition: 0.35s;
 }
 
 .footer-btn:hover {
-  background: #c89b5b;
-  color: #000;
+  background: #9e0500; /* 🔴 changed */
+  color: #fff;
 }
 
 /* RIGHT */
@@ -86,26 +86,26 @@
 }
 
 .footer-col h4 {
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 10px;
-  color: #c89b5b;
+  color: #9e0500; /* 🔴 changed */
 }
 
 .footer-col a {
   color: #ccc;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   transition: 0.3s;
 }
 
 .footer-col a:hover {
-  color: #fff;
+  color: #9e0500; /* 🔴 changed */
 }
 
 .footer-col p {
-  font-size: 14px;
+  font-size: 16px;
   color: #bbb;
 }
 
@@ -129,8 +129,8 @@
 }
 
 .footer-socials a:hover {
-  border-color: #c89b5b;
-  color: #c89b5b;
+  border-color: #9e0500; /* 🔴 changed */
+  color: #9e0500; /* 🔴 changed */
 }
 
 /* BOTTOM */
@@ -140,8 +140,8 @@
   padding-top: 20px;
   border-top: 1px solid #333;
   text-align: center;
-  font-size: 13px;
-  color: #888;
+  font-size: 15px;
+  color: #ffffff;
 }
 
 /* BACKGROUND WORD */

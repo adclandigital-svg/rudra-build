@@ -8,14 +8,17 @@
   z-index: 999;
   background: transparent;
   transition: 0.4s;
+  backdrop-filter: blur(10px);
+  
 }
 
 .navbar-wrapper.scrolled {
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  padding: 18px 70px;
-}
+  background: rgba(255, 255, 255, 0.3); /* transparent */
+  backdrop-filter: blur(10px); /* glass effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* subtle glass edge */
 
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -27,19 +30,45 @@
 .logo img {
   width: 150px;
   height: auto;
-  filter: brightness(0) invert(1);
 }
 .scrolled .logo img {
-  filter: none;
+  filter: brightness(10%) saturate(100%);
+  -webkit-filter: brightness(10%) saturate(100%);
+}
+
+/* RIGHT NAV */
+
+.nav-righ {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-righ a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.scrolled .nav-righ a {
+  color: #000000;
+}
+
+.nav-righ a:hover {
+  color: #9e0500;
 }
 
 /* HAMBURGER */
 
 .hamburger {
-  width: 40px;
+  width: 30px;
   height: 30px;
   position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger span {
@@ -49,8 +78,15 @@
   background: #ffffff;
   transition: 0.4s;
 }
-.scrolled span {
+.hamburger:hover span{
+  background-color: #9e0500;
+}
+
+.scrolled .hamburger span {
   background: black;
+}
+.scrolled .hamburger:hover span {
+  background: #9e0500;
 }
 
 .hamburger span:nth-child(1) {
@@ -60,8 +96,6 @@
 .hamburger span:nth-child(2) {
   bottom: 8px;
 }
-
-/* ACTIVE */
 
 .hamburger.active span:nth-child(1) {
   top: 14px;
@@ -78,7 +112,7 @@
 .mobile-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   pointer-events: none;
   z-index: 998;
@@ -88,44 +122,34 @@
 
 .mobile-sidebar {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 320px;
   transform: translateX(100%);
   z-index: 999;
-
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.95)),
-    url("https://img.freepik.com/premium-photo/home-family-real-estate-design-property-architecture-livings-concepts-white-minimal-miniature-small-house-shadow-stripe-pattern-background-with-copy-space-light-shadow-come-alive_36367-10924.jpg?w=1480");
-
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* INNER */
-
-.sidebar-inner {
-  width: 100%;
-  max-width: 1200px;
-  padding: 70px;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  padding: 40px 30px;
 }
 
-/* CLOSE */
+/* CLOSE BUTTON */
 
 .close-btn {
   position: absolute;
-  top: 40px;
-  right: 70px;
-  font-size: 36px;
+  top: 25px;
+  right: 25px;
+  font-size: 28px;
   background: none;
   border: none;
-  color: #fff;
+  color: #000;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #9e0500;
 }
 
 /* MENU */
@@ -133,51 +157,80 @@
 .sidebar-menu {
   display: flex;
   flex-direction: column;
-  gap: 35px;
-  margin-top: 120px;
+  gap: 22px;
+  margin-top: 80px;
 }
 
-/* LINK */
+/* LINKS */
 
 .menu-link {
-  font-size: 60px;
+  font-size: 22px;
   font-weight: 500;
-  color: #fff;
+  color: #111;
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 20px;
-  position: relative;
-  transition: 0.4s;
+  gap: 12px;
+  transition: 0.3s;
 }
-
-/* NUMBER */
 
 .menu-link span {
-  font-size: 16px;
-  opacity: 0.6;
+  font-size: 12px;
+  color: #999;
 }
 
-/* HOVER */
-
-.menu-link::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #f3b13b;
-  transition: 0.4s;
-}
-
-.menu-link:hover::after {
-  width: 100%;
-}
+/* 🔴 HOVER RED */
 
 .menu-link:hover {
-  transform: translateX(20px);
-  color: #f3b13b;
+  color: #9e0500;
+  transform: translateX(6px);
+}
+
+/* PROJECT WRAPPER */
+
+.sidebar-project {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -10px;
+}
+
+/* PROJECT TITLE */
+
+.project-title {
+  cursor: pointer;
+}
+
+/* SUBMENU */
+
+.project-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* SHOW ON HOVER */
+
+.sidebar-project:hover .project-submenu {
+  opacity: 1;
+  max-height: 320px;
+}
+
+/* SUBMENU LINKS */
+
+.project-submenu .menu-link {
+  font-size: 18px;
+  color: #333;
+}
+
+.project-submenu .menu-link:hover {
+  color: #e10600;
 }
 
 /* FOOTER */
@@ -187,47 +240,43 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
-  font-size: 14px;
 }
 
-.socials {
-  display: flex;
-  gap: 25px;
-}
+/* RESPONSIVE */
 
-.socials a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.socials a:hover {
-  color: #f3b13b;
+/* TABLET */
+@media (max-width: 1024px) {
+  .menu-link {
+    font-size: 20px;
+  }
 }
 
 /* MOBILE */
-
 @media (max-width: 768px) {
   .navbar-wrapper {
     padding: 20px 25px;
   }
 
-  .sidebar-inner {
-    padding: 40px;
+  .nav-righ a {
+    display: none;
   }
 
   .menu-link {
-    font-size: 36px;
+    font-size: 18px;
   }
 
-  .close-btn {
-    right: 30px;
+  .project-submenu .menu-link {
+    font-size: 16px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .menu-link {
+    font-size: 16px;
   }
 
-  .sidebar-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  .project-submenu .menu-link {
+    font-size: 14px;
   }
 }

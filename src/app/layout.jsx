@@ -1,15 +1,15 @@
-import { Spectral } from "next/font/google";
+import {  Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/providers/LenisProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ContactPopup from "@/components/layout/ContactPopup";
 
-const spectral = Spectral({
-  weight: ["400", "500", "600", "700", "800"],
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["400", "700"],
   display: "swap",
-  variable: "--font-spectral",
+  variable: "--font-cormorant",
 });
 
 export const metadata = {
@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={spectral.variable}>
+    <html lang="en" className={cormorantGaramond.variable}>
       <body>
         <LenisProvider>
           <Navbar/>

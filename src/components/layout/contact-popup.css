@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px; /* Prevent edge touching on small screens */
+  padding: 20px;
   z-index: 9999;
   animation: fadeIn 0.5s ease forwards;
 }
@@ -20,8 +20,8 @@
 .popup-container {
   width: 100%;
   max-width: 500px;
-  max-height: 90vh; /* Prevent overflow on short screens */
-  overflow-y: auto; /* Scroll if needed */
+  max-height: 90vh;
+  overflow-y: auto;
   background: #ffffff;
   border-radius: 25px;
   padding: 50px 40px;
@@ -31,7 +31,6 @@
   font-family: var(--font-spectral);
 }
 
-/* Hide scrollbar but allow scroll */
 .popup-container::-webkit-scrollbar {
   width: 0px;
 }
@@ -48,11 +47,11 @@
   font-size: 22px;
   cursor: pointer;
   transition: 0.3s ease;
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .popup-close:hover {
-  color: var(--color-hover);
+  color: #9e0500; /* 🔴 changed */
   transform: rotate(90deg);
 }
 
@@ -100,7 +99,8 @@
 
 .popup-form input:focus,
 .popup-form textarea:focus {
-  border-color: #c89b5b;
+  border-color: #9e0500; /* 🔴 changed */
+  box-shadow: 0 0 0 2px rgba(158, 5, 0, 0.1); /* subtle glow */
 }
 
 /* ===============================
@@ -111,7 +111,7 @@
   margin-top: 10px;
   padding: 14px;
   border-radius: 30px;
-  border: 1px solid #c89b5b;
+  border: 1px solid #9e0500; /* 🔴 changed */
   background: transparent;
   cursor: pointer;
   transition: color 0.4s ease;
@@ -129,7 +129,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: #c89b5b;
+  background: #9e0500; /* 🔴 changed */
   transition: left 0.4s ease;
   z-index: -1;
 }
@@ -140,7 +140,7 @@
 
 .popup-submit:hover {
   color: #fff;
-  border-color: #c89b5b;
+  border-color: #9e0500;
 }
 
 /* ===============================
@@ -163,10 +163,9 @@
 }
 
 /* ===============================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE
 ================================= */
 
-/* Large Desktop */
 @media (min-width: 1440px) {
   .popup-container {
     max-width: 550px;
@@ -178,7 +177,6 @@
   }
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
   .popup-container {
     max-width: 480px;
@@ -186,7 +184,6 @@
   }
 }
 
-/* Small Tablet */
 @media (max-width: 768px) {
   .popup-container {
     padding: 40px 30px;
@@ -202,7 +199,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
   .popup-overlay {
     padding: 15px;
@@ -227,7 +223,6 @@
   }
 }
 
-/* Extra Small Devices (320px phones) */
 @media (max-width: 360px) {
   .popup-container {
     padding: 25px 15px;
@@ -238,7 +233,6 @@
   }
 }
 
-/* Landscape Phones (short height screens) */
 @media (max-height: 600px) {
   .popup-container {
     max-height: 85vh;
