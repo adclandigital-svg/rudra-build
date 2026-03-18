@@ -101,7 +101,7 @@ export default function ProjectsSection() {
             className="project-image"
             style={{
               backgroundImage:
-                "url(https://images.unsplash.com/photo-1600585154526-990dced4db0d)",
+                "url(https://images.unsplash.com/photo-1600607687939-ce8a6c25118c)",
             }}
           ></div>
 
