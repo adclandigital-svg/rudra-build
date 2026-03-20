@@ -6,19 +6,21 @@
   width: 100%;
   padding: 25px 70px;
   z-index: 999;
-  background: transparent;
+  background: #9e0500;
   transition: 0.4s;
   backdrop-filter: blur(10px);
-  
 }
 
 .navbar-wrapper.scrolled {
-  background: rgba(255, 255, 255, 0.3); /* transparent */
-  backdrop-filter: blur(10px); /* glass effect */
+  /* background: rgba(255, 255, 255, 0.3);  */
+  background-color: white;
+  backdrop-filter: blur(10px);
+  /* glass effect */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* subtle glass edge */
-
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* subtle glass edge */
 }
+
 .navbar {
   display: flex;
   align-items: center;
@@ -31,9 +33,9 @@
   width: 150px;
   height: auto;
 }
+
 .scrolled .logo img {
-  filter: brightness(10%) saturate(100%);
-  -webkit-filter: brightness(10%) saturate(100%);
+  filter: brightness(0) saturate(100%) invert(11%) sepia(98%) saturate(5200%) hue-rotate(356deg) brightness(65%) contrast(115%);
 }
 
 /* RIGHT NAV */
@@ -52,11 +54,11 @@
 }
 
 .scrolled .nav-righ a {
-  color: #000000;
+  color: #9e0500;
 }
 
 .nav-righ a:hover {
-  color: #9e0500;
+  transform: scale(1.05);
 }
 
 /* HAMBURGER */
@@ -73,18 +75,20 @@
 
 .hamburger span {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 2px;
   background: #ffffff;
   transition: 0.4s;
 }
-.hamburger:hover span{
-  background-color: #9e0500;
+
+.hamburger:hover span {
+  background-color: #ffffff;
 }
 
 .scrolled .hamburger span {
-  background: black;
+  background:#9e0500;
 }
+
 .scrolled .hamburger:hover span {
   background: #9e0500;
 }
